@@ -5,17 +5,26 @@
 }}
 
 SELECT
-    1 AS customer_id,
+    10001 AS customer_id,
     'John' AS customer_name,
-    'London' AS city
+    'London' AS city,
+    'M' AS gender,
+    'Married' AS marital_status
 
 UNION ALL
 
 SELECT
-    2,
-    'Mary',
-    'Manchester'
-union all
-select 3,
-'claire',
-'London'
+   20001,
+   'Mary',
+    'Manchester',
+    'F',
+   'Single'
+
+UNION ALL
+
+SELECT
+   30001,
+   'Claire',
+   'London',
+  'F',
+    'Single'
