@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: stg
+    database: UKGI
+    schema: UKGI_POC
+
+    tables:
+      - name: RAW_CUSTOMERS
