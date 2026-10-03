@@ -7,3 +7,11 @@ models:
         tests:
           - unique
           - not_null
+  - name: stg_customer
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not null
+      - name: salary_employee
+        tests:
