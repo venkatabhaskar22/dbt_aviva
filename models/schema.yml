@@ -15,4 +15,3 @@ models:
           - not null
       - name: salary_employee
         tests:
-          
