@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: insurance_curated
+    database: INSURANCE_DB
+    schema: CURATED
+    tables:
+      - name: curated_claims
+
+  - name: insurance_raw
+    database: INSURANCE_DB
+    schema: RAW
+    tables:
+      - name: raw_payments
