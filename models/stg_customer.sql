@@ -1,6 +1,6 @@
 {{
     config(
-        materialized='incremental'
+        materialized='table'
     )
 }}
 
@@ -16,6 +16,8 @@ SELECT
     marital_status,
     lower(email) as email,
     CAST(annual_income as numeric(15,2)) as salary_employee,
+     metadata$action as cdc_action,
+      metadata$isupdate as cdc_isupdate,
     CAST(processed_dttm AS TIMESTAMP_NTZ(0)) as stg_timestamp,
-    CAST(current_timestamp() AS TIMESTAMP_LTZ(0)) as load_timestamp
-FROM {{ source('stg','RAW_CUSTOMERS') }}
+    CAST(current_timestamp() AS TIMESTAMP_NTZ(0)) as load_timestamp
+FROM {{ source('stg','RAW_CUST_STREAMS') }}

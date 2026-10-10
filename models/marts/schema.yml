@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_claims
+    columns:
+      - name: CLAIM_ID
+        data_tests:
+          - not_null
+          - unique
+
+  - name: stg_payments
+    columns:
+      - name: PAYMENT_ID
+        data_tests:
+          - not_null
+          - unique
+      - name: CLAIM_ID
+        data_tests:
+          - not_null
+
+  - name: fct_claims_payments
+    columns:
+      - name: CLAIM_ID
+        data_tests:
+          - not_null
+          - unique

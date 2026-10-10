@@ -6,4 +6,5 @@ sources:
     schema: UKGI_POC
 
     tables:
+      - name: RAW_CUST_STREAMS
       - name: RAW_CUSTOMERS
